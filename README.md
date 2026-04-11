@@ -37,3 +37,7 @@ A solução será uma **Aplicação Web Fullstack**.
 * **Fluxo 02:** Visualizar Alertas de Validade (O sistema filtra itens próximos ao vencimento).
 * **Fluxo 03:** Atualizar Quantidade/Status (O usuário edita o item após o consumo ou outro motivo).
 * **Fluxo 04:** Consultar Lista de Compras (Baseado nos itens que foram removidos ou estão acabando).
+
+## 6. Gestão do Projeto
+O acompanhamento das tarefas e o backlog do desenvolvimento podem ser visualizados no link abaixo:
+* [Link para o GitHub Project](https://github.com/users/FernandoLimaG/projects/4)
