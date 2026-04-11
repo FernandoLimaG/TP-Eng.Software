@@ -1,9 +1,9 @@
 # Trabalho Prático - Engenharia de Software
 
-**Nome:** Fernando de Lima Gonçalves
-**Curso:** Engenharia de Computação
-**Matrícula:** 905004
-**Instituição:** Pontifícia Universidade Católica de Minas Gerais
+**Nome:** Fernando de Lima Gonçalves <br>
+**Curso:** Engenharia de Computação <br>
+**Matrícula:** 905004 <br>
+**Instituição:** Pontifícia Universidade Católica de Minas Gerais <br>
 
 # Gestor de Estoque de Alimentos Perecíveis
 
