@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+</head>
+<body>
+
+<h1>Cadastrar Produto</h1>
+
+<!-- Adicionar Produto -->
+<form action="/produtos" method="post">
+  <input type="text" name="nome" placeholder="Nome do produto" required>
+  <input type="date" name="validade" required>
+  <button type="submit">Salvar</button>
+</form>
+
+<hr>
+
+<!-- Lista de Produtos Dinamica -->
+<h1>Lista de Produtos</h1>
+<ul>
+  <li th:each="p : ${produtos}">
+    <span th:text="${p.nome}"></span>
+    -
+    <span th:text="${p.validade}"></span>
+  </li>
+</ul>
+
+</body>
+</html>
