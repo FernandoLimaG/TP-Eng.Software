@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="BVs4AK6DdNOgqGsM2YP2">
+    <mxGraphModel dx="573" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-6" edge="1" parent="1" source="SGjmneQJ_Q3gp4k4fP4I-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="317" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-7" connectable="0" parent="SGjmneQJ_Q3gp4k4fP4I-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Utiliza&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0588" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="120" width="62" x="383" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-9" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Gestor de Estoque de Alimentos Perecíveis" vertex="1">
+          <mxGeometry height="290" width="371" x="228" y="500" as="geometry">
+            <mxRectangle height="30" width="140" x="199" y="700" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-16" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="- Controle de estoque" vertex="1">
+          <mxGeometry height="30" width="128" x="89.5" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-20" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="- Cadastro de alimentos" vertex="1">
+          <mxGeometry height="30" width="138" x="89.5" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-17" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="- Alertas de validade" vertex="1">
+          <mxGeometry height="30" width="128" x="89.5" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-18" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;- Renderização de páginas HTML&lt;/div&gt;" vertex="1">
+          <mxGeometry height="25" width="196" x="89.5" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-19" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Aplicação Web&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="105" x="135" y="38.75" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-21" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Java, Spring Boot, Thymeleaf" vertex="1">
+          <mxGeometry height="30" width="170" x="143" y="63.75" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-25" parent="SGjmneQJ_Q3gp4k4fP4I-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Tecnologias:&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="85" x="58" y="63.75" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Navegador Web" vertex="1">
+          <mxGeometry height="60" width="136" x="346" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-11" edge="1" parent="1" source="SGjmneQJ_Q3gp4k4fP4I-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashPattern=12 12;" target="SGjmneQJ_Q3gp4k4fP4I-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="430" as="sourcePoint" />
+            <mxPoint x="420" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-12" connectable="0" parent="SGjmneQJ_Q3gp4k4fP4I-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;HTTP&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0588" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-15" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Banco de Dados H2" vertex="1">
+          <mxGeometry height="170" width="186" x="321" y="906" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-27" parent="SGjmneQJ_Q3gp4k4fP4I-15" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Armazenamento de dados dos alimentos&lt;/div&gt;" vertex="1">
+          <mxGeometry height="112.5" width="147" x="19.5" y="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-28" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashPattern=12 12;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413" y="786" as="sourcePoint" />
+            <mxPoint x="413" y="906" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SGjmneQJ_Q3gp4k4fP4I-29" connectable="0" parent="SGjmneQJ_Q3gp4k4fP4I-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Acesso a dados" vertex="1">
+          <mxGeometry relative="1" x="0.0588" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
