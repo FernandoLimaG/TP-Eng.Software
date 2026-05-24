@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import java.time.LocalDate;
 
 @Controller
 public class ProdutoController {
@@ -22,9 +24,21 @@ public class ProdutoController {
         return "produtos";
     }
 
+    @GetMapping("/produtos/deletar/{id}")
+    public String deletar(@PathVariable Long id) {
+        produtoRepository.deleteById(id);
+        return "redirect:/produtos";
+    }
+
     @PostMapping("/produtos")
     public String salvar(Produto produto) {
-        produtoRepository.save(produto);
+        // --Validacao basica de entrada do usuario (nao possui alerta de erro ainda, apenhas falha)
+        boolean validacaoNome =  produto.getNome() != null && !produto.getNome().trim().isEmpty();
+        boolean validacaoDataValidade = !produto.getValidade().isBefore(LocalDate.now());
+        boolean validacaoQuantidade = produto.getQuantidade() > 0;
+        if(validacaoNome && validacaoDataValidade && validacaoQuantidade){
+            produtoRepository.save(produto);
+        }
         return "redirect:/produtos";
     }
 }

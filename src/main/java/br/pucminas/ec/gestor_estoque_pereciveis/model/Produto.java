@@ -14,6 +14,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private Integer quantidade;
     private LocalDate validade;
 
     public Produto() {

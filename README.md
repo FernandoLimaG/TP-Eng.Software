@@ -34,9 +34,8 @@ A solução será uma **Aplicação Web Fullstack**.
 ## 5. Casos de Uso
 * **Ator Principal:** Usuário Comum.
 * **Fluxo 01:** Cadastrar Alimento na Dispensa (O usuário insere os dados via formulário).
-* **Fluxo 02:** Visualizar Alertas de Validade (O sistema filtra itens próximos ao vencimento).
-* **Fluxo 03:** Atualizar Quantidade/Status (O usuário edita o item após o consumo ou outro motivo).
-* **Fluxo 04:** Consultar Lista de Compras (Baseado nos itens que foram removidos ou estão acabando).
+* **Fluxo 02:** Visualizar Produtos Cadastrados (O sistema exibe a lista de produtos armazenados.)
+* **Fluxo 03:** Remover Produto (O usuário remove produtos da lista de estoque.)
 
 ## 6. Gestão do Projeto
 O acompanhamento das tarefas e o backlog do desenvolvimento podem ser visualizados no link abaixo:

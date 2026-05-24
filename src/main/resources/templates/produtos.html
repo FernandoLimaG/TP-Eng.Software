@@ -3,29 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Produtos</title>
+
+  <link rel="stylesheet" th:ref="@{/css/style.css}">
 </head>
 <body>
 
-<h1>Cadastrar Produto</h1>
+<h1>Cadastro</h1>
 
 <!-- Adicionar Produto -->
 <form action="/produtos" method="post">
   <input type="text" name="nome" placeholder="Nome do produto" required>
   <input type="date" name="validade" required>
+  <input type="number" name="quantidade" placeholder="Quantidade" required>
   <button type="submit">Salvar</button>
 </form>
 
 <hr>
 
 <!-- Lista de Produtos Dinamica -->
-<h1>Lista de Produtos</h1>
-<ul>
-  <li th:each="p : ${produtos}">
-    <span th:text="${p.nome}"></span>
-    -
-    <span th:text="${p.validade}"></span>
-  </li>
-</ul>
+<h1>Produtos</h1>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Validade</th>
+    <th>Quantidade</th>
+    <th>Ações</th>
+  </tr>
 
+  <tr th:each="p : ${produtos}">
+    <td th:text="${p.nome}"></td>
+    <td th:text="${p.validade}"></td>
+    <td th:text="${p.quantidade}"></td>
+    <td>
+        <a th:href="@{/produtos/deletar/{id}(id=${p.id})}">
+          Excluir
+        </a>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
