@@ -105,3 +105,91 @@ Excluir vários produtos sequencialmente.
 
 ### Resultado Esperado
 Todos os produtos devem ser removidos corretamente.
+
+---
+
+# Resultados da Execução dos Testes - TP5
+
+## TC01 - Cadastro de Produto Válido
+
+**Objetivo:** Verificar se o sistema permite cadastrar um produto com dados válidos.
+
+**Dados Utilizados:**
+
+* Nome: Leite Integral
+* Quantidade: 10
+* Validade: data futura
+
+**Resultado Esperado:**
+Produto cadastrado com sucesso e exibido na listagem.
+
+**Resultado Obtido:**
+O produto foi cadastrado corretamente e exibido na tabela de produtos.
+
+**Status:** PASS
+
+## TC02 - Cadastro com Quantidade Inválida
+
+**Objetivo:** Verificar a validação de quantidade.
+
+**Dados Utilizados:**
+
+* Nome: Arroz
+* Quantidade: 0
+* Validade: data futura
+
+**Resultado Esperado:**
+O sistema deve impedir o cadastro e exibir mensagem de erro.
+
+**Resultado Obtido:**
+O cadastro foi bloqueado e a mensagem de erro foi exibida corretamente.
+
+**Status:** PASS
+
+## TC03 - Edição de Produto
+
+**Objetivo:** Verificar a atualização dos dados de um produto existente.
+
+**Dados Utilizados:**
+
+* Alteração da quantidade de um produto previamente cadastrado.
+
+**Resultado Esperado:**
+As alterações devem ser salvas e refletidas na listagem.
+
+**Resultado Obtido:**
+A atualização foi realizada corretamente e os novos dados foram exibidos na tabela.
+
+**Status:** PASS
+
+## TC04 - Exclusão de Produto
+
+**Objetivo:** Verificar a remoção de produtos cadastrados.
+
+**Dados Utilizados:**
+
+* Produto previamente cadastrado.
+
+**Resultado Esperado:**
+O produto deve ser removido da listagem.
+
+**Resultado Obtido:**
+O produto foi removido com sucesso.
+
+**Status:** PASS
+
+## TC05 - Alerta de Vencimento
+
+**Objetivo:** Verificar a identificação de produtos próximos ao vencimento.
+
+**Dados Utilizados:**
+
+* Produto com validade inferior a 7 dias.
+
+**Resultado Esperado:**
+O sistema deve exibir alerta indicando vencimento próximo.
+
+**Resultado Obtido:**
+O alerta foi exibido corretamente com a quantidade de dias restantes.
+
+**Status:** PASS
