@@ -1,13 +1,103 @@
-<!-- Homepage: Entrada (estado base - incompleto) -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Estoque</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <h1>Gestor de Estoque de Alimentos Perecíveis</h1>
-    <p>Sistema funcionando.</p>
-    <a href="produtos">Ir para Produtos</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">Gestor de Estoque</a>
+        <div>
+            <a class="btn btn-light btn-sm" href="/produtos">Produtos</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+
+    <section class="row align-items-center mb-5">
+        <div class="col-md-7">
+            <h1 class="display-5 fw-bold text-success">
+                Controle de alimentos perecíveis
+            </h1>
+
+            <p class="lead text-muted">
+                Gerencie produtos, acompanhe quantidades em estoque e receba alertas de vencimento.
+            </p>
+
+            <a href="/produtos" class="btn btn-success btn-lg">
+                Acessar Produtos
+            </a>
+        </div>
+
+        <div class="col-md-5 mt-4 mt-md-0">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Resumo do Sistema</h5>
+                    <p class="card-text">
+                        Aplicação web simples para apoiar o controle de estoque de produtos perecíveis.
+                    </p>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cadastro de produtos</li>
+                        <li class="list-group-item">Edição e exclusão</li>
+                        <li class="list-group-item">Alertas de validade</li>
+                        <li class="list-group-item">Validação de dados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Produtos</h5>
+                    <p class="card-text">
+                        Cadastre e organize os itens armazenados no estoque.
+                    </p>
+                    <a href="/produtos" class="btn btn-outline-success">Gerenciar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Validade</h5>
+                    <p class="card-text">
+                        Identifique produtos vencidos ou próximos ao vencimento.
+                    </p>
+                    <a href="/produtos" class="btn btn-outline-success">Ver alertas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Estoque</h5>
+                    <p class="card-text">
+                        Atualize quantidades e acompanhe os produtos cadastrados.
+                    </p>
+                    <a href="/produtos" class="btn btn-outline-success">Atualizar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="text-center text-muted py-4">
+    <small>Gestor de Estoque de Perecíveis</small>
+</footer>
+
 </body>
 </html>
