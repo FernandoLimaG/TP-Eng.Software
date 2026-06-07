@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.time.LocalDate;
 
 @Controller
@@ -17,15 +18,31 @@ public class ProdutoController {
     private ProdutoRepository produtoRepository;
 
     @PostMapping("/produtos")
-    public String salvar(Produto produto) {
-        produto.setId(null);
-
+    public String salvar(Produto produto, RedirectAttributes redirectAttributes) {
         boolean validacaoNome =  produto.getNome() != null && !produto.getNome().trim().isEmpty();
-        boolean validacaoDataValidade = !produto.getValidade().isBefore(LocalDate.now());
+        boolean validacaoDataValidade = produto.getValidade() != null && !produto.getValidade().isBefore(LocalDate.now());
         boolean validacaoQuantidade = produto.getQuantidade() > 0;
-        if(validacaoNome && validacaoDataValidade && validacaoQuantidade){
-            produtoRepository.save(produto);
+
+        if(!validacaoNome){
+            redirectAttributes.addFlashAttribute("erro", "Nome Inválido.");
+            return "redirect:/produtos";
         }
+
+        if(!validacaoDataValidade){
+            redirectAttributes.addFlashAttribute("erro", "Data de validade inválida.");
+            return "redirect:/produtos";
+        }
+
+        if(!validacaoQuantidade){
+            redirectAttributes.addFlashAttribute("erro", "Quantidade deve ser maior que zero.");
+            return "redirect:/produtos";
+        }
+
+        produto.setId(null);
+        produtoRepository.save(produto);
+
+        redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso.");
+
         return "redirect:/produtos";
     }
 
@@ -51,14 +68,29 @@ public class ProdutoController {
     }
 
     @PostMapping("/produtos/atualizar")
-    public String atualizar(Produto produto) {
+    public String atualizar(Produto produto, RedirectAttributes redirectAttributes) {
         boolean validacaoNome =  produto.getNome() != null && !produto.getNome().trim().isEmpty();
-        boolean validacaoDataValidade = !produto.getValidade().isBefore(LocalDate.now());
+        boolean validacaoDataValidade = produto.getValidade() != null && !produto.getValidade().isBefore(LocalDate.now());
         boolean validacaoQuantidade = produto.getQuantidade() > 0;
 
-        if(produto.getId() != null && validacaoNome && validacaoDataValidade && validacaoQuantidade){
-            produtoRepository.save(produto);
+        if(!validacaoNome){
+            redirectAttributes.addFlashAttribute("erro", "Nome inválido.");
+            return "redirect:/produtos";
         }
+
+        if(!validacaoDataValidade){
+            redirectAttributes.addFlashAttribute("erro", "Data de validade inválida.");
+            return "redirect:/produtos";
+        }
+
+        if(!validacaoQuantidade){
+            redirectAttributes.addFlashAttribute("erro", "Quantidade deve ser maior que zero.");
+            return "redirect:/produtos";
+        }
+
+        produtoRepository.save(produto);
+
+        redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso.");
 
         return "redirect:/produtos";
     }

@@ -40,3 +40,13 @@ a {
     color: red;
     text-decoration: none;
 }
+
+.sucesso {
+    color: green;
+    font-weight: bold;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+}

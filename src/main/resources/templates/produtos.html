@@ -7,6 +7,13 @@
   <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<div th:if="${sucesso}" class="sucesso">
+  <p th:text="${sucesso}"></p>
+</div>
+
+<div th:if="${erro}" class="erro">
+  <p th:text="${erro}"></p>
+</div>
 
 <h1 th:text="${produto.id == null ? 'Cadastro de Produto' : 'Edição de Produto'}"></h1>
 
@@ -29,12 +36,14 @@
     <th>Validade</th>
     <th>Quantidade</th>
     <th>Ações</th>
+    <th>Condição</th>
   </tr>
 
   <tr th:each="p : ${produtos}">
     <td th:text="${p.nome}"></td>
     <td th:text="${p.validade}"></td>
     <td th:text="${p.quantidade}"></td>
+    <td th:text="${p.statusValidade}"></td>
     <td>
         <a th:href="@{/produtos/editar/{id}(id=${p.id})}">
           Editar
