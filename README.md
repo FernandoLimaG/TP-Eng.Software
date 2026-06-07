@@ -23,7 +23,7 @@ A solução será uma **Aplicação Web Fullstack**.
 ### Requisitos Funcionais (RF)
 * **RF01:** O sistema deve permitir o cadastro de alimentos (Nome, Categoria, Data de Validade e Quantidade).
 * **RF02:** O sistema deve listar todos os alimentos cadastrados em um painel central.
-* **RF03:** O sistema deve destacar visualmente (alertas) os alimentos que vencem em menos de 3 dias.
+* **RF03:** O sistema deve destacar visualmente (alertas) os alimentos que vencem em menos de 7 dias.
 * **RF04:** O sistema deve permitir a exclusão ou atualização de itens (consumo ou descarte).
 
 ### Requisitos Não Funcionais (RNF)
