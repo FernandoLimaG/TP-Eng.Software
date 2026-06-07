@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <title>Produtos</title>
 
-  <link rel="stylesheet" th:ref="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
-<h1>Cadastro</h1>
+<h1 th:text="${produto.id == null ? 'Cadastro de Produto' : 'Edição de Produto'}"></h1>
 
 <!-- Adicionar Produto -->
-<form action="/produtos" method="post">
-  <input type="text" name="nome" placeholder="Nome do produto" required>
-  <input type="date" name="validade" required>
-  <input type="number" name="quantidade" placeholder="Quantidade" required>
-  <button type="submit">Salvar</button>
+<form th:action="@{${produto.id == null ? '/produtos' : '/produtos/atualizar'}}" method='post' th:object="${produto}">
+  <input type="hidden" th:field="*{id}">
+  <input type="text" th:field="*{nome}" placeholder="Nome do produto" required>
+  <input type="date" th:field="*{validade}" required>
+  <input type="number" th:field="*{quantidade}" placeholder="Quantidade" required>
+  <button type="submit" th:text="${produto.id == null ? 'Salvar' : 'Atualizar'}"></button>
 </form>
 
 <hr>
@@ -35,6 +36,10 @@
     <td th:text="${p.validade}"></td>
     <td th:text="${p.quantidade}"></td>
     <td>
+        <a th:href="@{/produtos/editar/{id}(id=${p.id})}">
+          Editar
+        </a>
+
         <a th:href="@{/produtos/deletar/{id}(id=${p.id})}">
           Excluir
         </a>
